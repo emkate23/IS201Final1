@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Romcom</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff0f5;
+      color: #d63384;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    #title {
+      font-size: 1.5rem;
+      margin-top: 30px;
+      color: #c2185b;
+    }
+
+    button {
+      background-color: #ff69b4;
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff85c1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>✨ Romcom Title Generator ✨</h1>
+  <p>Click the button for your next great romantic comedy name.</p>
+  <button onclick="generateTitle()">Generate Title</button>
+  <div id="title"></div>
+
+  <script>
+    const titles = [
+      "50 First Dates",
+      "How to Lose a Guy in 10 Days",
+      "Breakfast at Tiffany's",
+      "The Kissing Booth",
+      "Clueless",
+      "When Harry Met Sally",
+      "10 Things I Hate About You",
+      "The Notebook",
+      "The Proposal",
+      "When You Were Sleeping",
+      "Sleepless in Seatle",
+      "Crazy Rich Asians",
+      "Mean Girls",
+      "Mamma Mia"
+    ];
+
+    function generateTitle() {
+      const randomIndex = Math.floor(Math.random() * titles.length);
+      document.getElementById('title').textContent = titles[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
